@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D6D3F69F24A86A15003CE031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F69E24A86A15003CE031 /* AppDelegate.swift */; };
+		D6D3F6A124A86A15003CE031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */; };
+		D6D3F6A424A86A15003CE031 /* Office_Simulator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6A224A86A15003CE031 /* Office_Simulator.xcdatamodeld */; };
+		D6D3F6A624A86A15003CE031 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6A524A86A15003CE031 /* ContentView.swift */; };
+		D6D3F6A824A86A18003CE031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6D3F6A724A86A18003CE031 /* Assets.xcassets */; };
+		D6D3F6AB24A86A18003CE031 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6D3F6AA24A86A18003CE031 /* Preview Assets.xcassets */; };
+		D6D3F6AE24A86A18003CE031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D3F6AC24A86A18003CE031 /* LaunchScreen.storyboard */; };
+		D6D3F6B924A86A18003CE031 /* Office_SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6B824A86A18003CE031 /* Office_SimulatorTests.swift */; };
+		D6D3F6C424A86A18003CE031 /* Office_SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6C324A86A18003CE031 /* Office_SimulatorUITests.swift */; };
+		D6D3F6D224A911F1003CE031 /* Desk-animated-illustration.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */; };
+		D6D3F6D524A91278003CE031 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D6D3F6D424A91278003CE031 /* Lottie */; };
+		D6F075A324A9134100CB609D /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F075A224A9134100CB609D /* LottieView.swift */; };
+		D6F075A524A9176000CB609D /* DeskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F075A424A9176000CB609D /* DeskView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6D3F6B524A86A18003CE031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6D3F69324A86A15003CE031 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6D3F69A24A86A15003CE031;
+			remoteInfo = "Office Simulator";
+		};
+		D6D3F6C024A86A18003CE031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6D3F69324A86A15003CE031 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6D3F69A24A86A15003CE031;
+			remoteInfo = "Office Simulator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D6D3F69B24A86A15003CE031 /* Office Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Office Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6D3F69E24A86A15003CE031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D6D3F6A324A86A15003CE031 /* Office_Simulator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Office_Simulator.xcdatamodel; sourceTree = "<group>"; };
+		D6D3F6A524A86A15003CE031 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D6D3F6A724A86A18003CE031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6D3F6AA24A86A18003CE031 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D6D3F6AD24A86A18003CE031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D6D3F6AF24A86A18003CE031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6D3F6B424A86A18003CE031 /* Office SimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Office SimulatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6D3F6B824A86A18003CE031 /* Office_SimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office_SimulatorTests.swift; sourceTree = "<group>"; };
+		D6D3F6BA24A86A18003CE031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6D3F6BF24A86A18003CE031 /* Office SimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Office SimulatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6D3F6C324A86A18003CE031 /* Office_SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office_SimulatorUITests.swift; sourceTree = "<group>"; };
+		D6D3F6C524A86A18003CE031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Desk-animated-illustration.json"; sourceTree = "<group>"; };
+		D6F075A224A9134100CB609D /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		D6F075A424A9176000CB609D /* DeskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6D3F69824A86A15003CE031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6D3F6D524A91278003CE031 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6D3F6B124A86A18003CE031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6D3F6BC24A86A18003CE031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D6D3F69224A86A15003CE031 = {
+			isa = PBXGroup;
+			children = (
+				D6D3F69D24A86A15003CE031 /* Office Simulator */,
+				D6D3F6B724A86A18003CE031 /* Office SimulatorTests */,
+				D6D3F6C224A86A18003CE031 /* Office SimulatorUITests */,
+				D6D3F69C24A86A15003CE031 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D6D3F69C24A86A15003CE031 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6D3F69B24A86A15003CE031 /* Office Simulator.app */,
+				D6D3F6B424A86A18003CE031 /* Office SimulatorTests.xctest */,
+				D6D3F6BF24A86A18003CE031 /* Office SimulatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6D3F69D24A86A15003CE031 /* Office Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				D6D3F69E24A86A15003CE031 /* AppDelegate.swift */,
+				D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */,
+				D6D3F6A524A86A15003CE031 /* ContentView.swift */,
+				D6D3F6A724A86A18003CE031 /* Assets.xcassets */,
+				D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */,
+				D6F075A224A9134100CB609D /* LottieView.swift */,
+				D6F075A424A9176000CB609D /* DeskView.swift */,
+				D6D3F6AC24A86A18003CE031 /* LaunchScreen.storyboard */,
+				D6D3F6AF24A86A18003CE031 /* Info.plist */,
+				D6D3F6A224A86A15003CE031 /* Office_Simulator.xcdatamodeld */,
+				D6D3F6A924A86A18003CE031 /* Preview Content */,
+			);
+			path = "Office Simulator";
+			sourceTree = "<group>";
+		};
+		D6D3F6A924A86A18003CE031 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D6D3F6AA24A86A18003CE031 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D6D3F6B724A86A18003CE031 /* Office SimulatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D6D3F6B824A86A18003CE031 /* Office_SimulatorTests.swift */,
+				D6D3F6BA24A86A18003CE031 /* Info.plist */,
+			);
+			path = "Office SimulatorTests";
+			sourceTree = "<group>";
+		};
+		D6D3F6C224A86A18003CE031 /* Office SimulatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D6D3F6C324A86A18003CE031 /* Office_SimulatorUITests.swift */,
+				D6D3F6C524A86A18003CE031 /* Info.plist */,
+			);
+			path = "Office SimulatorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D6D3F69A24A86A15003CE031 /* Office Simulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6D3F6C824A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office Simulator" */;
+			buildPhases = (
+				D6D3F69724A86A15003CE031 /* Sources */,
+				D6D3F69824A86A15003CE031 /* Frameworks */,
+				D6D3F69924A86A15003CE031 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Office Simulator";
+			packageProductDependencies = (
+				D6D3F6D424A91278003CE031 /* Lottie */,
+			);
+			productName = "Office Simulator";
+			productReference = D6D3F69B24A86A15003CE031 /* Office Simulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D6D3F6B324A86A18003CE031 /* Office SimulatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6D3F6CB24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office SimulatorTests" */;
+			buildPhases = (
+				D6D3F6B024A86A18003CE031 /* Sources */,
+				D6D3F6B124A86A18003CE031 /* Frameworks */,
+				D6D3F6B224A86A18003CE031 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6D3F6B624A86A18003CE031 /* PBXTargetDependency */,
+			);
+			name = "Office SimulatorTests";
+			productName = "Office SimulatorTests";
+			productReference = D6D3F6B424A86A18003CE031 /* Office SimulatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D6D3F6BE24A86A18003CE031 /* Office SimulatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6D3F6CE24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office SimulatorUITests" */;
+			buildPhases = (
+				D6D3F6BB24A86A18003CE031 /* Sources */,
+				D6D3F6BC24A86A18003CE031 /* Frameworks */,
+				D6D3F6BD24A86A18003CE031 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6D3F6C124A86A18003CE031 /* PBXTargetDependency */,
+			);
+			name = "Office SimulatorUITests";
+			productName = "Office SimulatorUITests";
+			productReference = D6D3F6BF24A86A18003CE031 /* Office SimulatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6D3F69324A86A15003CE031 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Domogami;
+				TargetAttributes = {
+					D6D3F69A24A86A15003CE031 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					D6D3F6B324A86A18003CE031 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = D6D3F69A24A86A15003CE031;
+					};
+					D6D3F6BE24A86A18003CE031 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = D6D3F69A24A86A15003CE031;
+					};
+				};
+			};
+			buildConfigurationList = D6D3F69624A86A15003CE031 /* Build configuration list for PBXProject "Office Simulator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D6D3F69224A86A15003CE031;
+			packageReferences = (
+				D6D3F6D324A91278003CE031 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = D6D3F69C24A86A15003CE031 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6D3F69A24A86A15003CE031 /* Office Simulator */,
+				D6D3F6B324A86A18003CE031 /* Office SimulatorTests */,
+				D6D3F6BE24A86A18003CE031 /* Office SimulatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6D3F69924A86A15003CE031 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6D3F6AE24A86A18003CE031 /* LaunchScreen.storyboard in Resources */,
+				D6D3F6D224A911F1003CE031 /* Desk-animated-illustration.json in Resources */,
+				D6D3F6AB24A86A18003CE031 /* Preview Assets.xcassets in Resources */,
+				D6D3F6A824A86A18003CE031 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6D3F6B224A86A18003CE031 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6D3F6BD24A86A18003CE031 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6D3F69724A86A15003CE031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6D3F69F24A86A15003CE031 /* AppDelegate.swift in Sources */,
+				D6F075A524A9176000CB609D /* DeskView.swift in Sources */,
+				D6D3F6A124A86A15003CE031 /* SceneDelegate.swift in Sources */,
+				D6F075A324A9134100CB609D /* LottieView.swift in Sources */,
+				D6D3F6A624A86A15003CE031 /* ContentView.swift in Sources */,
+				D6D3F6A424A86A15003CE031 /* Office_Simulator.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6D3F6B024A86A18003CE031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6D3F6B924A86A18003CE031 /* Office_SimulatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6D3F6BB24A86A18003CE031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6D3F6C424A86A18003CE031 /* Office_SimulatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6D3F6B624A86A18003CE031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6D3F69A24A86A15003CE031 /* Office Simulator */;
+			targetProxy = D6D3F6B524A86A18003CE031 /* PBXContainerItemProxy */;
+		};
+		D6D3F6C124A86A18003CE031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6D3F69A24A86A15003CE031 /* Office Simulator */;
+			targetProxy = D6D3F6C024A86A18003CE031 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D6D3F6AC24A86A18003CE031 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6D3F6AD24A86A18003CE031 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D6D3F6C624A86A18003CE031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D6D3F6C724A86A18003CE031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6D3F6C924A86A18003CE031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_ASSET_PATHS = "\"Office Simulator/Preview Content\"";
+				DEVELOPMENT_TEAM = KCBAXZFAK6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Office Simulator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-Simulator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6D3F6CA24A86A18003CE031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_ASSET_PATHS = "\"Office Simulator/Preview Content\"";
+				DEVELOPMENT_TEAM = KCBAXZFAK6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Office Simulator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-Simulator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D6D3F6CC24A86A18003CE031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCBAXZFAK6;
+				INFOPLIST_FILE = "Office SimulatorTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-SimulatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Office Simulator.app/Office Simulator";
+			};
+			name = Debug;
+		};
+		D6D3F6CD24A86A18003CE031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCBAXZFAK6;
+				INFOPLIST_FILE = "Office SimulatorTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-SimulatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Office Simulator.app/Office Simulator";
+			};
+			name = Release;
+		};
+		D6D3F6CF24A86A18003CE031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCBAXZFAK6;
+				INFOPLIST_FILE = "Office SimulatorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-SimulatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Office Simulator";
+			};
+			name = Debug;
+		};
+		D6D3F6D024A86A18003CE031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCBAXZFAK6;
+				INFOPLIST_FILE = "Office SimulatorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-SimulatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Office Simulator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6D3F69624A86A15003CE031 /* Build configuration list for PBXProject "Office Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6D3F6C624A86A18003CE031 /* Debug */,
+				D6D3F6C724A86A18003CE031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6D3F6C824A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6D3F6C924A86A18003CE031 /* Debug */,
+				D6D3F6CA24A86A18003CE031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6D3F6CB24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office SimulatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6D3F6CC24A86A18003CE031 /* Debug */,
+				D6D3F6CD24A86A18003CE031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6D3F6CE24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office SimulatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6D3F6CF24A86A18003CE031 /* Debug */,
+				D6D3F6D024A86A18003CE031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6D3F6D324A91278003CE031 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6D3F6D424A91278003CE031 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6D3F6D324A91278003CE031 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D6D3F6A224A86A15003CE031 /* Office_Simulator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D6D3F6A324A86A15003CE031 /* Office_Simulator.xcdatamodel */,
+			);
+			currentVersion = D6D3F6A324A86A15003CE031 /* Office_Simulator.xcdatamodel */;
+			path = Office_Simulator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D6D3F69324A86A15003CE031 /* Project object */;
+}
