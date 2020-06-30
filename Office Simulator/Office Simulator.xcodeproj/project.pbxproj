@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D69630B824A9D85D0037A2C8 /* YesevaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */; };
+		D6CF9A1924A95934002EA25D /* Designing-animated-illustration.json in Resources */ = {isa = PBXBuildFile; fileRef = D6CF9A1824A95934002EA25D /* Designing-animated-illustration.json */; };
 		D6D3F69F24A86A15003CE031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F69E24A86A15003CE031 /* AppDelegate.swift */; };
 		D6D3F6A124A86A15003CE031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */; };
 		D6D3F6A424A86A15003CE031 /* Office_Simulator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6A224A86A15003CE031 /* Office_Simulator.xcdatamodeld */; };
@@ -18,6 +20,7 @@
 		D6D3F6C424A86A18003CE031 /* Office_SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6C324A86A18003CE031 /* Office_SimulatorUITests.swift */; };
 		D6D3F6D224A911F1003CE031 /* Desk-animated-illustration.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */; };
 		D6D3F6D524A91278003CE031 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D6D3F6D424A91278003CE031 /* Lottie */; };
+		D6D6096624AA84D000D940EA /* MainCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D6096524AA84D000D940EA /* MainCard.swift */; };
 		D6F075A324A9134100CB609D /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F075A224A9134100CB609D /* LottieView.swift */; };
 		D6F075A524A9176000CB609D /* DeskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F075A424A9176000CB609D /* DeskView.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YesevaOne-Regular.ttf"; sourceTree = "<group>"; };
+		D6CF9A1824A95934002EA25D /* Designing-animated-illustration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Designing-animated-illustration.json"; sourceTree = "<group>"; };
 		D6D3F69B24A86A15003CE031 /* Office Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Office Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D3F69E24A86A15003CE031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		D6D3F6C324A86A18003CE031 /* Office_SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office_SimulatorUITests.swift; sourceTree = "<group>"; };
 		D6D3F6C524A86A18003CE031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Desk-animated-illustration.json"; sourceTree = "<group>"; };
+		D6D6096524AA84D000D940EA /* MainCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCard.swift; sourceTree = "<group>"; };
 		D6F075A224A9134100CB609D /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D6F075A424A9176000CB609D /* DeskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,13 +118,16 @@
 				D6D3F69E24A86A15003CE031 /* AppDelegate.swift */,
 				D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */,
 				D6D3F6A524A86A15003CE031 /* ContentView.swift */,
+				D6D6096524AA84D000D940EA /* MainCard.swift */,
 				D6D3F6A724A86A18003CE031 /* Assets.xcassets */,
+				D6CF9A1824A95934002EA25D /* Designing-animated-illustration.json */,
 				D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */,
 				D6F075A224A9134100CB609D /* LottieView.swift */,
 				D6F075A424A9176000CB609D /* DeskView.swift */,
 				D6D3F6AC24A86A18003CE031 /* LaunchScreen.storyboard */,
 				D6D3F6AF24A86A18003CE031 /* Info.plist */,
 				D6D3F6A224A86A15003CE031 /* Office_Simulator.xcdatamodeld */,
+				D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */,
 				D6D3F6A924A86A18003CE031 /* Preview Content */,
 			);
 			path = "Office Simulator";
@@ -264,6 +273,8 @@
 				D6D3F6D224A911F1003CE031 /* Desk-animated-illustration.json in Resources */,
 				D6D3F6AB24A86A18003CE031 /* Preview Assets.xcassets in Resources */,
 				D6D3F6A824A86A18003CE031 /* Assets.xcassets in Resources */,
+				D6CF9A1924A95934002EA25D /* Designing-animated-illustration.json in Resources */,
+				D69630B824A9D85D0037A2C8 /* YesevaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D6096624AA84D000D940EA /* MainCard.swift in Sources */,
 				D6D3F69F24A86A15003CE031 /* AppDelegate.swift in Sources */,
 				D6F075A524A9176000CB609D /* DeskView.swift in Sources */,
 				D6D3F6A124A86A15003CE031 /* SceneDelegate.swift in Sources */,
