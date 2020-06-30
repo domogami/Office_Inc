@@ -9,9 +9,6 @@
 import SwiftUI
 
 struct MainCard: View {
-    @Binding var viewState: CGSize
-    @Binding var flipped: Bool
-    @Binding var choice: Int
     var image: String
     var text: String
     var customOffset: Bool
@@ -61,6 +58,6 @@ struct MainCard: View {
 
 struct MainCard_Previews: PreviewProvider {
     static var previews: some View {
-      MainCard(viewState: .constant(CGSize.zero), flipped: .constant(false), choice: .constant(-1), image: "Desk-animated-illustration", text: "Everyone in the office today is tired; it’s Monday after all. There’s an argument between Jeremey and Yolanda from HR over in the breakroom.", customOffset: true)
+      MainCard(image: "Desk-animated-illustration", text: "Everyone in the office today is tired; it’s Monday after all. There’s an argument between Jeremey and Yolanda from HR over in the breakroom.", customOffset: true)
     }
 }
