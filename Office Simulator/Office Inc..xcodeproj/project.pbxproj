@@ -63,10 +63,10 @@
 		D6D3F6AA24A86A18003CE031 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D6D3F6AD24A86A18003CE031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6D3F6AF24A86A18003CE031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6D3F6B424A86A18003CE031 /* Office SimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Office SimulatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6D3F6B424A86A18003CE031 /* Office Inc.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Office Inc.Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D3F6B824A86A18003CE031 /* Office_SimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office_SimulatorTests.swift; sourceTree = "<group>"; };
 		D6D3F6BA24A86A18003CE031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6D3F6BF24A86A18003CE031 /* Office SimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Office SimulatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6D3F6BF24A86A18003CE031 /* Office Inc.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Office Inc.UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D3F6C324A86A18003CE031 /* Office_SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office_SimulatorUITests.swift; sourceTree = "<group>"; };
 		D6D3F6C524A86A18003CE031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Desk-animated-illustration.json"; sourceTree = "<group>"; };
@@ -127,8 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				D6D3F69B24A86A15003CE031 /* Office Inc.app */,
-				D6D3F6B424A86A18003CE031 /* Office SimulatorTests.xctest */,
-				D6D3F6BF24A86A18003CE031 /* Office SimulatorUITests.xctest */,
+				D6D3F6B424A86A18003CE031 /* Office Inc.Tests.xctest */,
+				D6D3F6BF24A86A18003CE031 /* Office Inc.UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,9 +196,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D6D3F69A24A86A15003CE031 /* Office Simulator */ = {
+		D6D3F69A24A86A15003CE031 /* Office Inc. */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6D3F6C824A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office Simulator" */;
+			buildConfigurationList = D6D3F6C824A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office Inc." */;
 			buildPhases = (
 				D6D3F69724A86A15003CE031 /* Sources */,
 				D6D3F69824A86A15003CE031 /* Frameworks */,
@@ -208,7 +208,7 @@
 			);
 			dependencies = (
 			);
-			name = "Office Simulator";
+			name = "Office Inc.";
 			packageProductDependencies = (
 				D6D3F6D424A91278003CE031 /* Lottie */,
 			);
@@ -216,9 +216,9 @@
 			productReference = D6D3F69B24A86A15003CE031 /* Office Inc.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D6D3F6B324A86A18003CE031 /* Office SimulatorTests */ = {
+		D6D3F6B324A86A18003CE031 /* Office Inc.Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6D3F6CB24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office SimulatorTests" */;
+			buildConfigurationList = D6D3F6CB24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office Inc.Tests" */;
 			buildPhases = (
 				D6D3F6B024A86A18003CE031 /* Sources */,
 				D6D3F6B124A86A18003CE031 /* Frameworks */,
@@ -229,14 +229,14 @@
 			dependencies = (
 				D6D3F6B624A86A18003CE031 /* PBXTargetDependency */,
 			);
-			name = "Office SimulatorTests";
+			name = "Office Inc.Tests";
 			productName = "Office SimulatorTests";
-			productReference = D6D3F6B424A86A18003CE031 /* Office SimulatorTests.xctest */;
+			productReference = D6D3F6B424A86A18003CE031 /* Office Inc.Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D6D3F6BE24A86A18003CE031 /* Office SimulatorUITests */ = {
+		D6D3F6BE24A86A18003CE031 /* Office Inc.UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6D3F6CE24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office SimulatorUITests" */;
+			buildConfigurationList = D6D3F6CE24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office Inc.UITests" */;
 			buildPhases = (
 				D6D3F6BB24A86A18003CE031 /* Sources */,
 				D6D3F6BC24A86A18003CE031 /* Frameworks */,
@@ -247,9 +247,9 @@
 			dependencies = (
 				D6D3F6C124A86A18003CE031 /* PBXTargetDependency */,
 			);
-			name = "Office SimulatorUITests";
+			name = "Office Inc.UITests";
 			productName = "Office SimulatorUITests";
-			productReference = D6D3F6BF24A86A18003CE031 /* Office SimulatorUITests.xctest */;
+			productReference = D6D3F6BF24A86A18003CE031 /* Office Inc.UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -291,9 +291,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6D3F69A24A86A15003CE031 /* Office Simulator */,
-				D6D3F6B324A86A18003CE031 /* Office SimulatorTests */,
-				D6D3F6BE24A86A18003CE031 /* Office SimulatorUITests */,
+				D6D3F69A24A86A15003CE031 /* Office Inc. */,
+				D6D3F6B324A86A18003CE031 /* Office Inc.Tests */,
+				D6D3F6BE24A86A18003CE031 /* Office Inc.UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -370,12 +370,12 @@
 /* Begin PBXTargetDependency section */
 		D6D3F6B624A86A18003CE031 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D6D3F69A24A86A15003CE031 /* Office Simulator */;
+			target = D6D3F69A24A86A15003CE031 /* Office Inc. */;
 			targetProxy = D6D3F6B524A86A18003CE031 /* PBXContainerItemProxy */;
 		};
 		D6D3F6C124A86A18003CE031 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D6D3F69A24A86A15003CE031 /* Office Simulator */;
+			target = D6D3F69A24A86A15003CE031 /* Office Inc. */;
 			targetProxy = D6D3F6C024A86A18003CE031 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -442,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -496,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -516,11 +516,12 @@
 				DEVELOPMENT_TEAM = KCBAXZFAK6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Office Simulator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-Simulator";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-Inc.";
 				PRODUCT_NAME = "Office Inc";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -537,11 +538,12 @@
 				DEVELOPMENT_TEAM = KCBAXZFAK6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Office Simulator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-Simulator";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-Inc.";
 				PRODUCT_NAME = "Office Inc";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -566,7 +568,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Office Simulator.app/Office Simulator";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Office Inc..app/Office Inc.";
 			};
 			name = Debug;
 		};
@@ -588,7 +590,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Office Simulator.app/Office Simulator";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Office Inc..app/Office Inc.";
 			};
 			name = Release;
 		};
@@ -644,7 +646,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6D3F6C824A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office Simulator" */ = {
+		D6D3F6C824A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office Inc." */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6D3F6C924A86A18003CE031 /* Debug */,
@@ -653,7 +655,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6D3F6CB24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office SimulatorTests" */ = {
+		D6D3F6CB24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office Inc.Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6D3F6CC24A86A18003CE031 /* Debug */,
@@ -662,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6D3F6CE24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office SimulatorUITests" */ = {
+		D6D3F6CE24A86A18003CE031 /* Build configuration list for PBXNativeTarget "Office Inc.UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6D3F6CF24A86A18003CE031 /* Debug */,
