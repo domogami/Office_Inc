@@ -7,218 +7,177 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
-  @State var viewState = CGSize.zero
-  @State var viewState1 = CGSize.zero
-  @State var choice = -1
-  @State var flipped = false
-  @State var showMain = 0
-  @State var showOne = false
-
+  @State var index = 0
+  //  @State var oldGame = UserDefaults.standard.bool(forKey: "oldGame")
+  //  @State var showMain = UserDefaults.standard.integer(forKey: "showMain") ?? 0
+  @ObservedObject var player = playerObject()
+  @State var oldGame = UserDefaults.standard.bool(forKey: "oldGame")
+  @State var showMain = UserDefaults.standard.integer(forKey: "showMain")
+  @State var choice = UserDefaults.standard.integer(forKey: "choice")
   
   var body: some View {
     ZStack {
-      // Background Color
-      Color(#colorLiteral(red: 0.9490196078, green: 0.9647058824, blue: 1, alpha: 1))
-        .edgesIgnoringSafeArea(.all)
-      
-      // Fun Nametag
-      VStack {
-        HStack {
-          NameTag()
-            .rotationEffect(.degrees(-20))
-          Spacer()
-        }
-        Spacer()
-      }
-        
-      // Stack Of Cards
       ZStack {
-        // Background Card slightly rotated
+        Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+          .edgesIgnoringSafeArea(.all)
         VStack {
-          Spacer()
+          HStack {
+            Rectangle()
+              .frame(width: 25, height: 2)
+              .foregroundColor(Color.gray)
+              .rotationEffect(.degrees(-30))
+              .padding(.leading)
+              .offset(y: -10)
+            
+            Spacer()
+            Text("Office Inc.")
+              .font(.YesevaOne(size: 30))
+              .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+              .padding()
+          }
+          
+          VStack {
+            Spacer()
+            
+            if (self.oldGame) {
+              Button("Continue Game") {
+                self.index = 1
+              }
+              .fixedSize(horizontal: false, vertical: true)
+              .font(.system(size: 22, weight: .semibold, design: .default))
+              .padding(.horizontal, 20)
+              .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+              .frame(width: 150, height: 150)
+              .background(Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))
+              .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+              .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+              .rotationEffect(.degrees(-10))
+              .offset(x: -screen.width / 6, y: 30)
+              
+            }
+            
+            Spacer()
+            
+            Button("New Game") {
+              self.player.name = ""
+              self.showMain = 0
+              self.choice = 0
+              UserDefaults.standard.set(self.showMain, forKey: "showMain")
+              UserDefaults.standard.set(self.choice, forKey: "choice")
+              self.index = 2
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .font(.system(size: 22, weight: .semibold, design: .default))
+            .padding(.horizontal, 20)
+            .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+            .frame(width: 150, height: 150)
+            .background(Color(#colorLiteral(red: 0.1764705882, green: 0.3843137255, blue: 0.7843137255, alpha: 1)))
+            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+            .rotationEffect(.degrees(15))
+            .offset(x: screen.width / 5, y: 0)
+            .zIndex(100)
+            
+            Spacer()
+            
+            Button ("Settings") {
+              self.index = 3
+            }
+              
+            .fixedSize(horizontal: false, vertical: true)
+            .font(.system(size: 22, weight: .semibold, design: .default))
+            .padding(.horizontal, 20)
+            .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+            .frame(width: 150, height: 150)
+            .background(Color(#colorLiteral(red: 1, green: 0.9725490196, blue: 0.3019607843, alpha: 1)))
+            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+            .rotationEffect(.degrees(-5))
+            .offset(x: -screen.width / 7, y: -50)
+            Spacer()
+          }
         }
         .frame(width: screen.width * (3/4), height: screen.height / 2)
-        .background(Color.white)
+        .compositingGroup()
+        .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
         .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
         .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-        .rotationEffect(.degrees(-5))
         
-        if (self.showMain == 1 || self.showMain == 0 || (self.choice == 2 || self.choice == 3)) {
-          MainCard(
-            image: "Designing-animated-illustration",
-            text: "Yolanda is on about how ‘the world will never change’ or something, I didn’t hear the first part of her rant. I know that Jeremy isn’t going to stop until she storms off, though.",
-            customOffset: false
+        if (index == 1) {
+          MainGame(
+            playerName: self.$player.name,
+            index: self.$index,
+            showMain: self.$showMain
           )
-          .frame(width: screen.width * (3/4), height: screen.height / 2)
-          .offset(x: self.viewState1.width, y: self.viewState1.height)
-          .rotationEffect(.degrees(1/20 * Double(viewState1.width)))
-          .animation(Animation.default.delay(0))
-          .opacity(self.flipped ? 1 : 0)
-          .animation(Animation.easeInOut(duration: 0.2).delay(1))
-          .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-          .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
-          .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-          .foregroundColor(self.flipped ? .white : Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
-          .rotation3DEffect(self.flipped ? Angle(degrees: 0): Angle(degrees: 180), axis: (x: CGFloat(0), y: CGFloat(10), z: CGFloat(0)))
-          .animation(Animation.easeInOut(duration: 0.7).delay(0.5))
-          .gesture(
-            DragGesture().onChanged { value in
-              self.viewState1 = value.translation
-            }
-            .onEnded { value in
-              if (self.viewState1.width < -50) {
-                self.viewState1.width = -800
-//                self.flipped.toggle()
-                self.simpleSuccess()
-                self.choice = 2
-                self.showMain = 3
-                self.viewState = CGSize.zero
-              }
-              else if (self.viewState1.width > 50) {
-                self.viewState1.width = 800
-//                self.flipped.toggle()
-                self.simpleSuccess()
-                self.choice = 3
-                self.showMain = 4
-                self.viewState = CGSize.zero
-              }
-              else {
-                self.viewState1 = .zero
-              }
-            }
-          )
-          .id("two")
-          .animation(.spring())
+            .animation(Animation.easeInOut(duration: 0.5))
+            .transition(.moveAndFade)
         }
-        
-        if (self.showMain == 2 || self.showMain == 0 || (self.choice == 4 || self.choice == 5)) {
-          MainCard(
-            image: "Desk-animated-illustration",
-            text: "Page Blah",
-            customOffset: true
-          )
-          .frame(width: screen.width * (3/4), height: screen.height / 2)
-          .offset(x: self.viewState1.width, y: self.viewState1.height)
-          .rotationEffect(.degrees(1/20 * Double(viewState1.width)))
-          .animation(Animation.default.delay(0))
-          .opacity(self.flipped ? 1 : 0)
-          .animation(Animation.easeInOut(duration: 0.2).delay(1))
-          .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-          .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
-          .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-          .foregroundColor(self.flipped ? .white : Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-          .rotation3DEffect(self.flipped ? Angle(degrees: 0): Angle(degrees: 180), axis: (x: CGFloat(0), y: CGFloat(10), z: CGFloat(0)))
-          .animation(Animation.easeInOut(duration: 0.7).delay(0.5))
-          .gesture(
-            DragGesture().onChanged { value in
-              self.viewState1 = value.translation
-            }
-            .onEnded { value in
-              if (self.viewState1.width < -50) {
-                self.viewState1.width = -800
-//                self.flipped.toggle()
-                self.simpleSuccess()
-                self.choice = 4
-                self.showMain = 5
-                self.viewState = CGSize.zero
-              }
-              else if (self.viewState1.width > 50) {
-                self.viewState1.width = 800
-//                self.flipped.toggle()
-                self.simpleSuccess()
-                self.choice = 5
-                self.showMain = 6
-                self.viewState = CGSize.zero
-              }
-              else {
-                self.viewState1 = .zero
+        else if (index == 2) {
+          VStack {
+            HStack {
+              Text("Resume")
+                .font(.YesevaOne(size: 40))
+                .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+              Spacer()
+              Button(action: {
+                self.index = 0
+              }) {
+                // How the button looks like
+                Image(systemName: "xmark")
+                  .font(.system(size: 30, weight: .regular, design: .default))
+                  .padding(10)
+                  .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
               }
             }
-          )
-          .id("three")
-          .animation(.spring())
-        }
-        
-        if(self.showMain == 0 || (self.choice == 0 || self.choice == 1)) {
-          // Left Post It
-          VStack {
-            Text("I was going there anyways.")
-              .opacity(viewState.width > 50 ? 1: 0)
-              .font(.system(size: 20, weight: .semibold, design: .default))
-              .fixedSize(horizontal: false, vertical: true)
-              .padding(.horizontal)
-              .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
-          }
-          .frame(width: 200, height: 200)
-          .background(Color(#colorLiteral(red: 1, green: 0.9725490196, blue: 0.3019607843, alpha: 1)))
-          .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
-          .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-          .offset(y: viewState.height/4)
-          .offset(x: -screen.width / 2, y: 50)
-          .offset(x: viewState.width / 2)
-          .rotationEffect(.degrees(-10))
-          .animation(.easeInOut)
-          .offset(x: self.choice == 1 ? -800 : 0)
-          .animation(.spring())
-          
-          // Right Post It
-          VStack {
-            Text("I bet that Abe wants an update on my project.")
-              .opacity(viewState.width < -50 ? 1: 0)
-              .font(.system(size: 20, weight: .semibold, design: .default))
-              .fixedSize(horizontal: false, vertical: true)
-              .padding(.horizontal)
+            Spacer()
+            HStack {
+              Text("Name of Candidate")
+                .font(.system(size: 20, weight: .regular, design: .default))
+                .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+              Spacer()
+            }
+            TextField("Eric Jaszkowiak", text: $player.name)
+              .padding(10)
+              .background(Color(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)))
+              .font(.system(size: 16, weight: .regular, design: .default))
+              .cornerRadius(15)
               .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+            HStack {
+              Spacer()
+              Button("Continue") {
+                self.index = 1
+                self.oldGame = true
+                UserDefaults.standard.set(self.oldGame, forKey: "oldGame")
+              }
+              .font(.system(size: 20, weight: .regular, design: .default))
+              .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+              Image(systemName: "chevron.right")
+                .font(.system(size: 20))
+                .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+              
+            }
+            
+            Spacer()
           }
-          .frame(width: 200, height: 200)
-          .background(Color(#colorLiteral(red: 0.1764705882, green: 0.3843137255, blue: 0.7843137255, alpha: 1)))
+          .padding()
+          .frame(width: screen.width * (3/4), height: screen.height / 2)
+          .compositingGroup()
+          .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
           .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
           .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-          .offset(y: viewState.height/4)
-          .offset(x: screen.width / 2, y: -100)
-          .offset(x: viewState.width / 2)
-          .rotationEffect(.degrees(10))
-          .animation(Animation.easeInOut.delay(0))
-          .offset(x: self.choice == 0 ? 800 : 0)
-          .animation(Animation.spring().delay(1.5))
-        
-          // MARK: - Card 1
-        
-          MainCard(
-            image: "Desk-animated-illustration",
-            text: "Everyone in the office today is tired; it’s Monday after all. There’s an argument between Jeremey and Yolanda from HR over in the breakroom.",
-            customOffset: true
-          )
-          .offset(x: viewState.width, y: viewState.height)
-          .rotationEffect(.degrees(1/20 * Double(viewState.width)))
-          .gesture(
-            DragGesture().onChanged { value in
-              self.viewState = value.translation
-            }
-            .onEnded { value in
-              if (self.viewState.width < -50) {     // Right Choice
-                self.viewState.width = -800         // Slide out animation
-                self.flipped = true                 // Flip the back card
-                self.simpleSuccess()                // Haptic Feedback
-                self.choice = 0                     // Record the choice
-                self.showMain = 1                   // Record binary decision
-              }
-              else if (self.viewState.width > 50) { // Left Choice
-                self.viewState.width = 800          // Slide out animation
-                self.flipped = true                 // Flip the back card
-                self.simpleSuccess()                // Haptic Feedback
-                self.choice = 1                     // Record the choice
-                self.showMain = 2                   // Record binary decision
-              }
-              else {
-                self.viewState = .zero
-              }
-            }
-          )
-          .animation(.spring())
-        } // End of If
+          .animation(Animation.spring(response: 0.5, dampingFraction: 0.9, blendDuration: 0.5))
+          .transition(.moveAndFade)
+        }
+        else if (index == 3){
+          VStack {
+            Text("Settings")
+          }
+          .animation(Animation.easeInOut(duration: 0.5))
+          .transition(.moveAndFade)
+        }
       }
     }
   }
@@ -226,7 +185,6 @@ struct ContentView: View {
     let generator = UINotificationFeedbackGenerator()
     generator.notificationOccurred(.success)
   }
-  
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -239,6 +197,8 @@ let screen = UIScreen.main.bounds
 
 
 struct NameTag: View {
+  @Binding var playerName: String
+  
   var body: some View {
     VStack {
       Spacer()
@@ -251,7 +211,7 @@ struct NameTag: View {
       
       Spacer()
       
-      Text("Eric")
+      Text("\(self.playerName)")
         .font(.system(size: 25, weight: .semibold, design: .default))
         .foregroundColor(Color.black)
         .frame(width: 150, height: 40)
@@ -277,7 +237,84 @@ extension AnyTransition {
 }
 
 extension Font {
-    static func YesevaOne(size: CGFloat) -> Font {
-        Font.custom("YesevaOne-Regular", size: size)
+  static func YesevaOne(size: CGFloat) -> Font {
+    Font.custom("YesevaOne-Regular", size: size)
+  }
+}
+
+struct FlipView<SomeTypeOfViewA : View, SomeTypeOfViewB : View> : View {
+  
+  var front : SomeTypeOfViewA
+  var back : SomeTypeOfViewB
+  
+  @State private var flipped = false
+  @Binding var showBack : Bool
+  
+  var body: some View {
+    
+    return VStack {
+      Spacer()
+      
+      ZStack() {
+        front.opacity(flipped ? 0.0 : 1.0)
+        back.opacity(flipped ? 1.0 : 0.0)
+      }
+      .modifier(FlipEffect(flipped: $flipped, angle: showBack ? 180 : 0, axis: (x: 1, y: 0)))
+      .onTapGesture {
+        withAnimation(Animation.linear(duration: 1.5)) {
+          self.showBack.toggle()
+        }
+      }
+      Spacer()
     }
+  }
+}
+
+struct FlipEffect: GeometryEffect {
+  
+  var animatableData: Double {
+    get { angle }
+    set { angle = newValue }
+  }
+  
+  @Binding var flipped: Bool
+  var angle: Double
+  let axis: (x: CGFloat, y: CGFloat)
+  
+  func effectValue(size: CGSize) -> ProjectionTransform {
+    
+    DispatchQueue.main.async {
+      self.flipped = self.angle >= 90 && self.angle < 270
+    }
+    
+    let tweakedAngle = flipped ? -180 + angle : angle
+    let a = CGFloat(Angle(degrees: tweakedAngle).radians)
+    
+    var transform3d = CATransform3DIdentity;
+    transform3d.m34 = -1/max(size.width, size.height)
+    
+    transform3d = CATransform3DRotate(transform3d, a, axis.y, axis.x, 0)
+    transform3d = CATransform3DTranslate(transform3d, -size.width/2.0, -size.height/2.0, 0)
+    
+    let affineTransform = ProjectionTransform(CGAffineTransform(translationX: size.width / 2.0, y: size.height / 2.0))
+    
+    return ProjectionTransform(transform3d).concatenating(affineTransform)
+  }
+}
+
+class playerObject : ObservableObject {
+  private static let userDefaultTextKey = "playerName"
+  @Published var name = UserDefaults.standard.string(forKey: playerObject.userDefaultTextKey) ?? ""
+  
+  private var canc: AnyCancellable!
+  
+  init() {
+    canc = $name.debounce(for: 0.2, scheduler: DispatchQueue.main).sink { newText in
+      UserDefaults.standard.set(newText, forKey: playerObject.userDefaultTextKey)
+    }
+  }
+  
+  deinit {
+    canc.cancel()
+  }
 }

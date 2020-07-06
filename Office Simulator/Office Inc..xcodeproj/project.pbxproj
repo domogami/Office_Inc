@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D643D78524B2DEBE002A4A99 /* PrimaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */; };
+		D643D78724B2E363002A4A99 /* GenericCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D643D78624B2E363002A4A99 /* GenericCard.swift */; };
+		D66D120A24B262E800AAC9FC /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D120924B262E800AAC9FC /* Coffee.swift */; };
 		D69630B824A9D85D0037A2C8 /* YesevaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */; };
 		D6CF9A1924A95934002EA25D /* Designing-animated-illustration.json in Resources */ = {isa = PBXBuildFile; fileRef = D6CF9A1824A95934002EA25D /* Designing-animated-illustration.json */; };
 		D6D3F69F24A86A15003CE031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F69E24A86A15003CE031 /* AppDelegate.swift */; };
@@ -21,8 +24,11 @@
 		D6D3F6D224A911F1003CE031 /* Desk-animated-illustration.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */; };
 		D6D3F6D524A91278003CE031 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D6D3F6D424A91278003CE031 /* Lottie */; };
 		D6D6096624AA84D000D940EA /* MainCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D6096524AA84D000D940EA /* MainCard.swift */; };
+		D6DD472524AD478B00C9086A /* MainGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD472424AD478B00C9086A /* MainGame.swift */; };
+		D6DD472724AD4F1000C9086A /* Card1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD472624AD4F1000C9086A /* Card1.swift */; };
 		D6F075A324A9134100CB609D /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F075A224A9134100CB609D /* LottieView.swift */; };
-		D6F075A524A9176000CB609D /* DeskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F075A424A9176000CB609D /* DeskView.swift */; };
+		D6F7E2A924AD56AB00F86FA6 /* Card2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7E2A824AD56AB00F86FA6 /* Card2.swift */; };
+		D6F7E2AB24AD57D100F86FA6 /* Card3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7E2AA24AD57D100F86FA6 /* Card3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryCard.swift; sourceTree = "<group>"; };
+		D643D78624B2E363002A4A99 /* GenericCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCard.swift; sourceTree = "<group>"; };
+		D66D120924B262E800AAC9FC /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YesevaOne-Regular.ttf"; sourceTree = "<group>"; };
 		D6CF9A1824A95934002EA25D /* Designing-animated-illustration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Designing-animated-illustration.json"; sourceTree = "<group>"; };
-		D6D3F69B24A86A15003CE031 /* Office Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Office Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6D3F69B24A86A15003CE031 /* Office Inc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Office Inc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D3F69E24A86A15003CE031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D6D3F6A324A86A15003CE031 /* Office_Simulator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Office_Simulator.xcdatamodel; sourceTree = "<group>"; };
@@ -62,8 +71,11 @@
 		D6D3F6C524A86A18003CE031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Desk-animated-illustration.json"; sourceTree = "<group>"; };
 		D6D6096524AA84D000D940EA /* MainCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCard.swift; sourceTree = "<group>"; };
+		D6DD472424AD478B00C9086A /* MainGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGame.swift; sourceTree = "<group>"; };
+		D6DD472624AD4F1000C9086A /* Card1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1.swift; sourceTree = "<group>"; };
 		D6F075A224A9134100CB609D /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		D6F075A424A9176000CB609D /* DeskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskView.swift; sourceTree = "<group>"; };
+		D6F7E2A824AD56AB00F86FA6 /* Card2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card2.swift; sourceTree = "<group>"; };
+		D6F7E2AA24AD57D100F86FA6 /* Card3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6A35D0824B3C40C0034B932 /* Illustrations */ = {
+			isa = PBXGroup;
+			children = (
+				D6CF9A1824A95934002EA25D /* Designing-animated-illustration.json */,
+				D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */,
+			);
+			path = Illustrations;
+			sourceTree = "<group>";
+		};
 		D6D3F69224A86A15003CE031 = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +126,7 @@
 		D6D3F69C24A86A15003CE031 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6D3F69B24A86A15003CE031 /* Office Simulator.app */,
+				D6D3F69B24A86A15003CE031 /* Office Inc.app */,
 				D6D3F6B424A86A18003CE031 /* Office SimulatorTests.xctest */,
 				D6D3F6BF24A86A18003CE031 /* Office SimulatorUITests.xctest */,
 			);
@@ -118,12 +139,13 @@
 				D6D3F69E24A86A15003CE031 /* AppDelegate.swift */,
 				D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */,
 				D6D3F6A524A86A15003CE031 /* ContentView.swift */,
+				D6DD472424AD478B00C9086A /* MainGame.swift */,
 				D6D6096524AA84D000D940EA /* MainCard.swift */,
+				D66D120924B262E800AAC9FC /* Coffee.swift */,
+				D6DD472824AD4F1D00C9086A /* Cards */,
 				D6D3F6A724A86A18003CE031 /* Assets.xcassets */,
-				D6CF9A1824A95934002EA25D /* Designing-animated-illustration.json */,
-				D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */,
 				D6F075A224A9134100CB609D /* LottieView.swift */,
-				D6F075A424A9176000CB609D /* DeskView.swift */,
+				D6A35D0824B3C40C0034B932 /* Illustrations */,
 				D6D3F6AC24A86A18003CE031 /* LaunchScreen.storyboard */,
 				D6D3F6AF24A86A18003CE031 /* Info.plist */,
 				D6D3F6A224A86A15003CE031 /* Office_Simulator.xcdatamodeld */,
@@ -159,6 +181,18 @@
 			path = "Office SimulatorUITests";
 			sourceTree = "<group>";
 		};
+		D6DD472824AD4F1D00C9086A /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */,
+				D643D78624B2E363002A4A99 /* GenericCard.swift */,
+				D6DD472624AD4F1000C9086A /* Card1.swift */,
+				D6F7E2A824AD56AB00F86FA6 /* Card2.swift */,
+				D6F7E2AA24AD57D100F86FA6 /* Card3.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,7 +213,7 @@
 				D6D3F6D424A91278003CE031 /* Lottie */,
 			);
 			productName = "Office Simulator";
-			productReference = D6D3F69B24A86A15003CE031 /* Office Simulator.app */;
+			productReference = D6D3F69B24A86A15003CE031 /* Office Inc.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D6D3F6B324A86A18003CE031 /* Office SimulatorTests */ = {
@@ -241,7 +275,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D6D3F69624A86A15003CE031 /* Build configuration list for PBXProject "Office Simulator" */;
+			buildConfigurationList = D6D3F69624A86A15003CE031 /* Build configuration list for PBXProject "Office Inc." */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -300,12 +334,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6D6096624AA84D000D940EA /* MainCard.swift in Sources */,
+				D66D120A24B262E800AAC9FC /* Coffee.swift in Sources */,
+				D6DD472724AD4F1000C9086A /* Card1.swift in Sources */,
 				D6D3F69F24A86A15003CE031 /* AppDelegate.swift in Sources */,
-				D6F075A524A9176000CB609D /* DeskView.swift in Sources */,
+				D6F7E2AB24AD57D100F86FA6 /* Card3.swift in Sources */,
 				D6D3F6A124A86A15003CE031 /* SceneDelegate.swift in Sources */,
+				D643D78524B2DEBE002A4A99 /* PrimaryCard.swift in Sources */,
 				D6F075A324A9134100CB609D /* LottieView.swift in Sources */,
+				D6F7E2A924AD56AB00F86FA6 /* Card2.swift in Sources */,
 				D6D3F6A624A86A15003CE031 /* ContentView.swift in Sources */,
+				D6DD472524AD478B00C9086A /* MainGame.swift in Sources */,
 				D6D3F6A424A86A15003CE031 /* Office_Simulator.xcdatamodeld in Sources */,
+				D643D78724B2E363002A4A99 /* GenericCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,9 +521,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-Simulator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Office Inc";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -502,9 +542,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-Simulator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Office Inc";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -595,7 +635,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D6D3F69624A86A15003CE031 /* Build configuration list for PBXProject "Office Simulator" */ = {
+		D6D3F69624A86A15003CE031 /* Build configuration list for PBXProject "Office Inc." */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6D3F6C624A86A18003CE031 /* Debug */,
