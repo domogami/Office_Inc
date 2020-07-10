@@ -11,17 +11,14 @@ import Combine
 
 struct ContentView: View {
   @State var index = 0
-  //  @State var oldGame = UserDefaults.standard.bool(forKey: "oldGame")
-  //  @State var showMain = UserDefaults.standard.integer(forKey: "showMain") ?? 0
   @ObservedObject var player = playerObject()
   @State var oldGame = UserDefaults.standard.bool(forKey: "oldGame")
   @State var showMain = UserDefaults.standard.integer(forKey: "showMain")
-  @State var choice = UserDefaults.standard.integer(forKey: "choice")
   
   var body: some View {
     ZStack {
       ZStack {
-        Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+        Color(#colorLiteral(red: 0.9490196078, green: 0.9647058824, blue: 1, alpha: 1))
           .edgesIgnoringSafeArea(.all)
         VStack {
           HStack {
@@ -39,66 +36,61 @@ struct ContentView: View {
               .padding()
           }
           
-          VStack {
-            Spacer()
-            
-            if (self.oldGame) {
-              Button("Continue Game") {
-                self.index = 1
-              }
-              .fixedSize(horizontal: false, vertical: true)
-              .font(.system(size: 22, weight: .semibold, design: .default))
-              .padding(.horizontal, 20)
-              .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-              .frame(width: 150, height: 150)
-              .background(Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))
-              .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
-              .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-              .rotationEffect(.degrees(-10))
-              .offset(x: -screen.width / 6, y: 30)
-              
-            }
-            
-            Spacer()
-            
-            Button("New Game") {
-              self.player.name = ""
-              self.showMain = 0
-              self.choice = 0
-              UserDefaults.standard.set(self.showMain, forKey: "showMain")
-              UserDefaults.standard.set(self.choice, forKey: "choice")
-              self.index = 2
+          if (self.oldGame) {
+            Button("Continue Game") {
+              self.index = 1
             }
             .fixedSize(horizontal: false, vertical: true)
             .font(.system(size: 22, weight: .semibold, design: .default))
             .padding(.horizontal, 20)
             .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
             .frame(width: 150, height: 150)
-            .background(Color(#colorLiteral(red: 0.1764705882, green: 0.3843137255, blue: 0.7843137255, alpha: 1)))
+            .background(Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))
             .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
             .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-            .rotationEffect(.degrees(15))
-            .offset(x: screen.width / 5, y: 0)
-            .zIndex(100)
-            
+            .rotationEffect(.degrees(-10))
+            .offset(x: -screen.width / 6, y: 30)
             Spacer()
             
-            Button ("Settings") {
-              self.index = 3
-            }
-              
-            .fixedSize(horizontal: false, vertical: true)
-            .font(.system(size: 22, weight: .semibold, design: .default))
-            .padding(.horizontal, 20)
-            .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
-            .frame(width: 150, height: 150)
-            .background(Color(#colorLiteral(red: 1, green: 0.9725490196, blue: 0.3019607843, alpha: 1)))
-            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
-            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-            .rotationEffect(.degrees(-5))
-            .offset(x: -screen.width / 7, y: -50)
-            Spacer()
           }
+          
+          Button("New Game") {
+            self.player.name = ""
+            // For Beta
+            self.showMain = 0
+            UserDefaults.standard.set(self.showMain, forKey: "showMain")
+            self.index = 2
+          }
+          .fixedSize(horizontal: false, vertical: true)
+          .font(.system(size: 22, weight: .semibold, design: .default))
+          .padding(.horizontal, 20)
+          .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+          .frame(width: 150, height: 150)
+          .background(Color(#colorLiteral(red: 0.1764705882, green: 0.3843137255, blue: 0.7843137255, alpha: 1)))
+          .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+          .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+          .rotationEffect(.degrees(15))
+          .offset(x: screen.width / 5, y: 0)
+          .zIndex(100)
+          
+          Spacer()
+          
+          Button ("Settings") {
+            self.index = 3
+          }
+            
+          .fixedSize(horizontal: false, vertical: true)
+          .font(.system(size: 22, weight: .semibold, design: .default))
+          .padding(.horizontal, 20)
+          .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+          .frame(width: 150, height: 150)
+          .background(Color(#colorLiteral(red: 1, green: 0.9725490196, blue: 0.3019607843, alpha: 1)))
+          .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+          .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+          .rotationEffect(.degrees(-5))
+          .offset(x: -screen.width / 7, y: -50)
+          Spacer()
+          
         }
         .frame(width: screen.width * (3/4), height: screen.height / 2)
         .compositingGroup()
@@ -132,16 +124,15 @@ struct ContentView: View {
                   .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
               }
             }
-            Spacer()
             HStack {
               Text("Name of Candidate")
                 .font(.system(size: 20, weight: .regular, design: .default))
                 .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
               Spacer()
             }
-            TextField("Eric Jaszkowiak", text: $player.name)
+            TextField("Enter your name", text: $player.name)
               .padding(10)
-              .background(Color(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)))
+              .background(Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)))
               .font(.system(size: 16, weight: .regular, design: .default))
               .cornerRadius(15)
               .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
@@ -173,9 +164,39 @@ struct ContentView: View {
         }
         else if (index == 3){
           VStack {
-            Text("Settings")
+            HStack {
+              Text("Settings")
+                .font(.YesevaOne(size: 40))
+                .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+              Spacer()
+              Button(action: {
+                self.index = 0
+              }) {
+                // How the button looks like
+                Image(systemName: "xmark")
+                  .font(.system(size: 30, weight: .regular, design: .default))
+                  .padding(10)
+                  .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+              }
+            }
+            Spacer()
+            HStack {
+              Text("Setting 1")
+                .font(.system(size: 20, weight: .regular, design: .default))
+                .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+              Spacer()
+            }
+            
+            
+            Spacer()
           }
-          .animation(Animation.easeInOut(duration: 0.5))
+          .padding()
+          .frame(width: screen.width * (3/4), height: screen.height / 2)
+          .compositingGroup()
+          .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+          .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+          .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+          .animation(Animation.spring(response: 0.5, dampingFraction: 0.9, blendDuration: 0.5))
           .transition(.moveAndFade)
         }
       }
@@ -212,7 +233,7 @@ struct NameTag: View {
       Spacer()
       
       Text("\(self.playerName)")
-        .font(.system(size: 25, weight: .semibold, design: .default))
+        .font(.WaitingfortheSunrise(size: 20))
         .foregroundColor(Color.black)
         .frame(width: 150, height: 40)
         .background(Color.white)
@@ -240,6 +261,9 @@ extension Font {
   static func YesevaOne(size: CGFloat) -> Font {
     Font.custom("YesevaOne-Regular", size: size)
   }
+  static func WaitingfortheSunrise(size: CGFloat) -> Font {
+    Font.custom("WaitingfortheSunrise-Regular", size: size)
+  }
 }
 
 struct FlipView<SomeTypeOfViewA : View, SomeTypeOfViewB : View> : View {
@@ -260,11 +284,12 @@ struct FlipView<SomeTypeOfViewA : View, SomeTypeOfViewB : View> : View {
         back.opacity(flipped ? 1.0 : 0.0)
       }
       .modifier(FlipEffect(flipped: $flipped, angle: showBack ? 180 : 0, axis: (x: 1, y: 0)))
-      .onTapGesture {
-        withAnimation(Animation.linear(duration: 1.5)) {
-          self.showBack.toggle()
-        }
-      }
+      //      .onTapGesture {
+      //        withAnimation(Animation.linear(duration: 1.5)) {
+      //          self.showBack.toggle()
+      //        }
+      //      }
+      //.animation(.easeInOut(duration: 1))
       Spacer()
     }
   }
@@ -302,7 +327,7 @@ struct FlipEffect: GeometryEffect {
   }
 }
 
-class playerObject : ObservableObject {
+class playerObject: ObservableObject {
   private static let userDefaultTextKey = "playerName"
   @Published var name = UserDefaults.standard.string(forKey: playerObject.userDefaultTextKey) ?? ""
   

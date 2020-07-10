@@ -9,14 +9,19 @@
 import SwiftUI
 
 struct PrimaryCard: View {
+  @State var viewState = CGSize.zero
   @Binding var playerName: String
-  @Binding var viewState: CGSize
   @Binding var showMain: Int
   @Binding var flipped: Bool
+  var cardNumber: Int
   var MainText: String
+  var SubText: String
   var LeftText: String
   var RightText: String
   var imageName: String
+  var leftChoice: Int
+  var rightChoice: Int
+  var italic: Int
 
   var body: some View {
     ZStack {
@@ -38,7 +43,7 @@ struct PrimaryCard: View {
       .offset(x: viewState.width * 3/4)
       .rotationEffect(.degrees(-10))
       .animation(.easeInOut)
-      .offset(x: (self.showMain == 1) ? -800 : 0)
+      .offset(x: (self.showMain != cardNumber) ? -800 : 0)
       .animation(.spring())
       
       // Right Post It
@@ -59,13 +64,14 @@ struct PrimaryCard: View {
       .offset(x: viewState.width * (3/4))
       .rotationEffect(.degrees(10))
       .animation(Animation.easeInOut.delay(0))
-      .offset(x: (self.showMain == 2) ? 800 : 0)
+      .offset(x: (self.showMain != cardNumber) ? 800 : 0)
       .animation(Animation.spring().delay(1.5))
       
       MainCard(
         image: self.imageName,
         text: self.MainText,
-        customOffset: true
+        subText: self.SubText,
+        italic: self.italic
       )
       .offset(x: viewState.width, y: viewState.height)
       .rotationEffect(.degrees(1/20 * Double(viewState.width)))
@@ -75,18 +81,20 @@ struct PrimaryCard: View {
         }
         .onEnded { value in
           if (self.viewState.width < -70) {     // Right Choice
-//            self.viewState.width = -800         // Slide out animation
+            self.viewState.width = -800         // Slide out animation
             self.flipped = true                 // Flip the back card
             self.simpleSuccess()                // Haptic Feedback
-            self.showMain = 2                  // Record binary decision
+            self.showMain = self.rightChoice    // Record binary decision
             UserDefaults.standard.set(self.showMain, forKey: "showMain")
+
           }
           else if (self.viewState.width > 70) { // Left Choice
             self.viewState.width = 800          // Slide out animation
             self.flipped = true                 // Flip the back card
             self.simpleSuccess()                // Haptic Feedback
-            self.showMain = 1                  // Record binary decision
+            self.showMain = self.leftChoice     // Record binary decision
             UserDefaults.standard.set(self.showMain, forKey: "showMain")
+
           }
           else {
             self.viewState = .zero
@@ -108,13 +116,17 @@ struct PrimaryCard_Previews: PreviewProvider {
     static var previews: some View {
         PrimaryCard(
            playerName: .constant("Kat"),
-           viewState: .constant(CGSize.zero),
            showMain: .constant(0),
            flipped: .constant(false),
+           cardNumber: 0,
            MainText: "\(self.PlayerName) - you’re new around here right? Can I have a moment of your time?",
+           SubText: "",
            LeftText: "Yeah, um, who are you?",
            RightText: "No - I’m kinda busy right now",
-           imageName: "Desk-animated-illustration"
+           imageName: "Desk-animated-illustration",
+           leftChoice: 1,
+           rightChoice: 0,
+           italic: 0
         )
     }
 }
