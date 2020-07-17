@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6230D1224B81D1700589250 /* TitleTheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6230D1124B81D1700589250 /* TitleTheme.mp3 */; };
+		D6230D1324B9256A00589250 /* WaitingfortheSunrise-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68D4C5B24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf */; };
+		D6230D1424B9256A00589250 /* WaitingfortheSunrise-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68D4C5B24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf */; };
 		D643D78524B2DEBE002A4A99 /* PrimaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */; };
 		D643D78724B2E363002A4A99 /* GenericCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D643D78624B2E363002A4A99 /* GenericCard.swift */; };
 		D66D120A24B262E800AAC9FC /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D120924B262E800AAC9FC /* Coffee.swift */; };
-		D678547024B6912E008196FB /* Working-animated-illustration-2.json in Resources */ = {isa = PBXBuildFile; fileRef = D678546F24B6912E008196FB /* Working-animated-illustration-2.json */; };
 		D68D4C5C24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68D4C5B24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf */; };
 		D69630B824A9D85D0037A2C8 /* YesevaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */; };
-		D6CF9A1924A95934002EA25D /* Designing-animated-illustration.json in Resources */ = {isa = PBXBuildFile; fileRef = D6CF9A1824A95934002EA25D /* Designing-animated-illustration.json */; };
 		D6D3F69F24A86A15003CE031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F69E24A86A15003CE031 /* AppDelegate.swift */; };
 		D6D3F6A124A86A15003CE031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */; };
 		D6D3F6A424A86A15003CE031 /* Office_Simulator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6A224A86A15003CE031 /* Office_Simulator.xcdatamodeld */; };
@@ -23,7 +24,6 @@
 		D6D3F6AE24A86A18003CE031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D3F6AC24A86A18003CE031 /* LaunchScreen.storyboard */; };
 		D6D3F6B924A86A18003CE031 /* Office_SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6B824A86A18003CE031 /* Office_SimulatorTests.swift */; };
 		D6D3F6C424A86A18003CE031 /* Office_SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F6C324A86A18003CE031 /* Office_SimulatorUITests.swift */; };
-		D6D3F6D224A911F1003CE031 /* Desk-animated-illustration.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */; };
 		D6D3F6D524A91278003CE031 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D6D3F6D424A91278003CE031 /* Lottie */; };
 		D6D6096624AA84D000D940EA /* MainCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D6096524AA84D000D940EA /* MainCard.swift */; };
 		D6DD472524AD478B00C9086A /* MainGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD472424AD478B00C9086A /* MainGame.swift */; };
@@ -48,13 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6230D1124B81D1700589250 /* TitleTheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TitleTheme.mp3; sourceTree = "<group>"; };
 		D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryCard.swift; sourceTree = "<group>"; };
 		D643D78624B2E363002A4A99 /* GenericCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCard.swift; sourceTree = "<group>"; };
 		D66D120924B262E800AAC9FC /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
-		D678546F24B6912E008196FB /* Working-animated-illustration-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Working-animated-illustration-2.json"; sourceTree = "<group>"; };
 		D68D4C5B24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WaitingfortheSunrise-Regular.ttf"; sourceTree = "<group>"; };
 		D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YesevaOne-Regular.ttf"; sourceTree = "<group>"; };
-		D6CF9A1824A95934002EA25D /* Designing-animated-illustration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Designing-animated-illustration.json"; sourceTree = "<group>"; };
 		D6D3F69B24A86A15003CE031 /* Office Inc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Office Inc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D3F69E24A86A15003CE031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +69,6 @@
 		D6D3F6BF24A86A18003CE031 /* Office Inc.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Office Inc.UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D3F6C324A86A18003CE031 /* Office_SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office_SimulatorUITests.swift; sourceTree = "<group>"; };
 		D6D3F6C524A86A18003CE031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Desk-animated-illustration.json"; sourceTree = "<group>"; };
 		D6D6096524AA84D000D940EA /* MainCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCard.swift; sourceTree = "<group>"; };
 		D6DD472424AD478B00C9086A /* MainGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGame.swift; sourceTree = "<group>"; };
 		D6F075A224A9134100CB609D /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -102,16 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D6A35D0824B3C40C0034B932 /* Illustrations */ = {
-			isa = PBXGroup;
-			children = (
-				D6CF9A1824A95934002EA25D /* Designing-animated-illustration.json */,
-				D678546F24B6912E008196FB /* Working-animated-illustration-2.json */,
-				D6D3F6D124A911F0003CE031 /* Desk-animated-illustration.json */,
-			);
-			path = Illustrations;
-			sourceTree = "<group>";
-		};
 		D6D3F69224A86A15003CE031 = {
 			isa = PBXGroup;
 			children = (
@@ -143,12 +131,12 @@
 				D6F075A224A9134100CB609D /* LottieView.swift */,
 				D6DD472824AD4F1D00C9086A /* Cards */,
 				D6D3F6A724A86A18003CE031 /* Assets.xcassets */,
-				D6A35D0824B3C40C0034B932 /* Illustrations */,
 				D6D3F6AC24A86A18003CE031 /* LaunchScreen.storyboard */,
 				D6D3F6AF24A86A18003CE031 /* Info.plist */,
 				D6D3F6A224A86A15003CE031 /* Office_Simulator.xcdatamodeld */,
 				D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */,
 				D68D4C5B24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf */,
+				D6230D1124B81D1700589250 /* TitleTheme.mp3 */,
 				D6D3F6A924A86A18003CE031 /* Preview Content */,
 			);
 			path = "Office Simulator";
@@ -256,7 +244,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Domogami;
 				TargetAttributes = {
 					D6D3F69A24A86A15003CE031 = {
@@ -301,12 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6D3F6AE24A86A18003CE031 /* LaunchScreen.storyboard in Resources */,
-				D6D3F6D224A911F1003CE031 /* Desk-animated-illustration.json in Resources */,
 				D6D3F6AB24A86A18003CE031 /* Preview Assets.xcassets in Resources */,
-				D678547024B6912E008196FB /* Working-animated-illustration-2.json in Resources */,
 				D6D3F6A824A86A18003CE031 /* Assets.xcassets in Resources */,
-				D6CF9A1924A95934002EA25D /* Designing-animated-illustration.json in Resources */,
 				D68D4C5C24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf in Resources */,
+				D6230D1224B81D1700589250 /* TitleTheme.mp3 in Resources */,
 				D69630B824A9D85D0037A2C8 /* YesevaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6230D1324B9256A00589250 /* WaitingfortheSunrise-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6230D1424B9256A00589250 /* WaitingfortheSunrise-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +402,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -474,6 +463,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -517,7 +507,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-Inc.";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = net.dominicklee.OfficeInc;
 				PRODUCT_NAME = "Office Inc";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -539,7 +530,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.domogami.Office-Inc.";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = net.dominicklee.OfficeInc;
 				PRODUCT_NAME = "Office Inc";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

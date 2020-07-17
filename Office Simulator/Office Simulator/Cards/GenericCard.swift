@@ -28,10 +28,12 @@ struct GenericCard: View {
       // Left Post It
       VStack {
         Text(LeftText)
-          .opacity(viewState.width > 30 ? 1 : 0)
-          .font(.system(size: 20, weight: .semibold, design: .default))
+          .opacity(viewState.width > 20 ? 1 : 0)
+          .font(.system(size: 18, weight: .semibold, design: .default))
+          .padding(.leading, 15)
+          .padding(.trailing, 20)
           .fixedSize(horizontal: false, vertical: true)
-          .padding(.horizontal)
+          .padding(.horizontal, 30)
           .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
       }
       .frame(width: 200, height: 200)
@@ -40,19 +42,21 @@ struct GenericCard: View {
       .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
       .offset(y: viewState.height / 4)
       .offset(x: -screen.width / 2, y: 50)
-      .offset(x: viewState.width / 2)
+      .offset(x: viewState.width * (2/3))
       .rotationEffect(.degrees(-10))
       .animation(.easeInOut)
       .offset(x: (self.showMain != cardNumber) ? -800 : 0)
       .animation(.spring())
       .opacity(self.flipped ? 1 : 0)
-      .animation(Animation.easeInOut(duration: 0.2).delay(1))
+      .animation(.easeInOut)
       
       // Right Post It
       VStack {
         Text(RightText)
-          .opacity(viewState.width < -30 ? 1 : 0)
-          .font(.system(size: 20, weight: .semibold, design: .default))
+          .opacity(viewState.width < -20 ? 1 : 0)
+          .font(.system(size: 18, weight: .semibold, design: .default))
+          .padding(.leading, 15)
+          .padding(.trailing, 20)
           .fixedSize(horizontal: false, vertical: true)
           .padding(.horizontal)
           .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
@@ -63,13 +67,13 @@ struct GenericCard: View {
       .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
       .offset(y: viewState.height / 4)
       .offset(x: screen.width / 2, y: -100)
-      .offset(x: viewState.width / 2)
+      .offset(x: viewState.width * (2/3))
       .rotationEffect(.degrees(10))
       .animation(Animation.easeInOut.delay(0))
       .offset(x: (self.showMain != cardNumber) ? 800 : 0)
       .animation(Animation.spring().delay(1.5))
       .opacity(self.flipped ? 1 : 0)
-      .animation(Animation.easeInOut(duration: 0.2).delay(1))
+      .animation(.easeInOut)
       
       FlipView(
         front:
@@ -131,19 +135,21 @@ struct GenericCard: View {
 
 struct GenericCard_Previews: PreviewProvider {
     static var previews: some View {
+      Group {
         GenericCard(
           showMain: .constant(0),
           flipped: .constant(false),
           flipped1: .constant(false),
           cardNumber: 1,
-          MainText: "I’m Isey - I work for Newspaper Inc. and I’m here on a tip,  can we go outside?",
+          MainText: "I’m Isey - I work for Newspaper Inc. and I’m here on a tip, can we go outside?",
           SubText: "",
           LeftText: "I’m a little busy, can you come by later?",
           RightText: "Yeah, I’m not so busy right now",
-          imageName: "Desk-animated-illustration",
-          rightChoice: 0,
+          imageName: "coffee",
+          rightChoice: 1,
           leftChoice: 1,
           italic: 0
         )
+      }
     }
 }

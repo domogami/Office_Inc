@@ -29,7 +29,7 @@ struct PrimaryCard: View {
       VStack {
         Text(self.LeftText)
           .opacity(viewState.width > 30 ? 1: 0)
-          .font(.system(size: 20, weight: .semibold, design: .default))
+          .font(.system(size: 18, weight: .semibold, design: .default))
           .fixedSize(horizontal: false, vertical: true)
           .padding(.horizontal, 30)
           .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
@@ -40,7 +40,7 @@ struct PrimaryCard: View {
       .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
       .offset(y: viewState.height/4)
       .offset(x: -screen.width / 2, y: 50)
-      .offset(x: viewState.width * 3/4)
+      .offset(x: viewState.width * (3/5))
       .rotationEffect(.degrees(-10))
       .animation(.easeInOut)
       .offset(x: (self.showMain != cardNumber) ? -800 : 0)
@@ -51,6 +51,8 @@ struct PrimaryCard: View {
         Text(self.RightText)
           .opacity(viewState.width < -30 ? 1: 0)
           .font(.system(size: 20, weight: .semibold, design: .default))
+          .padding(.leading, 15)
+          .padding(.trailing, 20)
           .fixedSize(horizontal: false, vertical: true)
           .padding(.horizontal, 30)
           .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
@@ -65,7 +67,7 @@ struct PrimaryCard: View {
       .rotationEffect(.degrees(10))
       .animation(Animation.easeInOut.delay(0))
       .offset(x: (self.showMain != cardNumber) ? 800 : 0)
-      .animation(Animation.spring().delay(1.5))
+      .animation(.spring())
       
       MainCard(
         image: self.imageName,
@@ -114,6 +116,7 @@ struct PrimaryCard: View {
 struct PrimaryCard_Previews: PreviewProvider {
     static var PlayerName = "Kat"
     static var previews: some View {
+      Group {
         PrimaryCard(
            playerName: .constant("Kat"),
            showMain: .constant(0),
@@ -123,10 +126,11 @@ struct PrimaryCard_Previews: PreviewProvider {
            SubText: "",
            LeftText: "Yeah, um, who are you?",
            RightText: "No - I’m kinda busy right now",
-           imageName: "Desk-animated-illustration",
+           imageName: "coffee",
            leftChoice: 1,
            rightChoice: 0,
            italic: 0
         )
+      }
     }
 }
