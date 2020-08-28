@@ -10,6 +10,8 @@
 		D6230D1224B81D1700589250 /* TitleTheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6230D1124B81D1700589250 /* TitleTheme.mp3 */; };
 		D6230D1324B9256A00589250 /* WaitingfortheSunrise-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68D4C5B24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf */; };
 		D6230D1424B9256A00589250 /* WaitingfortheSunrise-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68D4C5B24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf */; };
+		D629AE4824E4CED70055AA80 /* testCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629AE4724E4CED70055AA80 /* testCard.swift */; };
+		D629AE4A24E4CEEA0055AA80 /* testGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629AE4924E4CEEA0055AA80 /* testGame.swift */; };
 		D643D78524B2DEBE002A4A99 /* PrimaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */; };
 		D643D78724B2E363002A4A99 /* GenericCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D643D78624B2E363002A4A99 /* GenericCard.swift */; };
 		D66D120A24B262E800AAC9FC /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D120924B262E800AAC9FC /* Coffee.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		D6230D1124B81D1700589250 /* TitleTheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TitleTheme.mp3; sourceTree = "<group>"; };
+		D629AE4724E4CED70055AA80 /* testCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCard.swift; sourceTree = "<group>"; };
+		D629AE4924E4CEEA0055AA80 /* testGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testGame.swift; sourceTree = "<group>"; };
 		D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryCard.swift; sourceTree = "<group>"; };
 		D643D78624B2E363002A4A99 /* GenericCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCard.swift; sourceTree = "<group>"; };
 		D66D120924B262E800AAC9FC /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				D6DD472424AD478B00C9086A /* MainGame.swift */,
 				D66D120924B262E800AAC9FC /* Coffee.swift */,
 				D6F075A224A9134100CB609D /* LottieView.swift */,
+				D629AE4724E4CED70055AA80 /* testCard.swift */,
+				D629AE4924E4CEEA0055AA80 /* testGame.swift */,
 				D6DD472824AD4F1D00C9086A /* Cards */,
 				D6D3F6A724A86A18003CE031 /* Assets.xcassets */,
 				D6D3F6AC24A86A18003CE031 /* LaunchScreen.storyboard */,
@@ -327,8 +333,10 @@
 				D643D78524B2DEBE002A4A99 /* PrimaryCard.swift in Sources */,
 				D6F075A324A9134100CB609D /* LottieView.swift in Sources */,
 				D6D3F6A624A86A15003CE031 /* ContentView.swift in Sources */,
+				D629AE4A24E4CEEA0055AA80 /* testGame.swift in Sources */,
 				D6DD472524AD478B00C9086A /* MainGame.swift in Sources */,
 				D6D3F6A424A86A15003CE031 /* Office_Simulator.xcdatamodeld in Sources */,
+				D629AE4824E4CED70055AA80 /* testCard.swift in Sources */,
 				D643D78724B2E363002A4A99 /* GenericCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.01;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"Office Simulator/Preview Content\"";
 				DEVELOPMENT_TEAM = KCBAXZFAK6;
@@ -520,6 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.01;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"Office Simulator/Preview Content\"";
 				DEVELOPMENT_TEAM = KCBAXZFAK6;

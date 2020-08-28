@@ -12,7 +12,8 @@ import AVKit
 
 struct ContentView: View {
   @State var index = 0
-  @State var oldGame = UserDefaults.standard.bool(forKey: "oldGame")
+  @State var oldGame = true
+    //UserDefaults.standard.bool(forKey: "oldGame")
   @State var showMain = UserDefaults.standard.integer(forKey: "showMain")
   @State var musicToggle = UserDefaults.standard.bool(forKey: "music")
   @State var titlePlayer: AVAudioPlayer!
@@ -22,6 +23,10 @@ struct ContentView: View {
     ZStack {
       ZStack {
         Color(#colorLiteral(red: 0.9490196078, green: 0.9647058824, blue: 1, alpha: 1))
+        //        Color(#colorLiteral(red: 0.5203282833, green: 0.6935389042, blue: 0.7111260891, alpha: 1))
+        
+        //Color(#colorLiteral(red: 0.8666666667, green: 0.8470588235, blue: 0.8352941176, alpha: 1))
+        //Color(#colorLiteral(red: 0.8352941176, green: 0.8196078431, blue: 0.9098039216, alpha: 1))
           .edgesIgnoringSafeArea(.all)
           .onTapGesture {
             self.hideKeyboard()
@@ -86,8 +91,8 @@ struct ContentView: View {
             .background(Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))
             .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
             .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-            .rotationEffect(.degrees(-20))
-            .offset(x: -screen.width / 5, y: -40)
+            .rotationEffect(.degrees(-10))
+            .offset(x: -screen.width / 7, y: -50)
             Spacer()
           }
           
@@ -125,8 +130,8 @@ struct ContentView: View {
           .background(Color(#colorLiteral(red: 1, green: 0.9725490196, blue: 0.3019607843, alpha: 1)))
           .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
           .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-          .rotationEffect(.degrees(-5))
-          .offset(x: -screen.width / 7, y: self.oldGame ? 130 : 60)
+          .rotationEffect(.degrees(-20))
+          .offset(x: -screen.width / 6, y: self.oldGame ? 130 : 60)
           Spacer()
         }
         
@@ -176,27 +181,34 @@ struct ContentView: View {
             .padding(.vertical, 10)
             .foregroundColor(Color.black)
             Spacer()
-            HStack {
-              Spacer()
-              Button("Continue") {
-                self.index = 1
-                self.oldGame = true
-                UserDefaults.standard.set(self.oldGame, forKey: "oldGame")
-              }
-              .font(.system(size: 20, weight: .regular, design: .default))
-              .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
-              Image(systemName: "chevron.right")
-                .font(.system(size: 20))
-                .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
-            }
-            Spacer()
-            Group {
+            
+            ZStack {
               RoundedRectangle(cornerRadius: 20)
                 .padding(.trailing, screen.width / 3)
                 .padding(.horizontal, 5)
                 .frame(height: 15)
                 .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
                 .padding(.vertical, 10)
+              HStack {
+                Spacer()
+                
+                Button("Continue") {
+                  self.index = 1
+                  self.oldGame = true
+                  UserDefaults.standard.set(self.oldGame, forKey: "oldGame")
+                }
+                .font(.system(size: 20, weight: .regular, design: .default))
+                .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+                
+                Image(systemName: "chevron.right")
+                  .font(.system(size: 20))
+                  .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.1294117647, blue: 0.3176470588, alpha: 1)))
+                
+              }
+              
+            }
+            Spacer()
+            Group {
               
               RoundedRectangle(cornerRadius: 20)
                 .padding(.horizontal, 5)
@@ -309,8 +321,8 @@ struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       ContentView()
-        .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
-        .previewDisplayName("iPhone SE")
+        .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+        .previewDisplayName("iPhone 8")
       
       ContentView()
         .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro Max"))
@@ -386,12 +398,12 @@ struct FlipView<SomeTypeOfViewA : View, SomeTypeOfViewB : View> : View {
         back.opacity(flipped ? 1.0 : 0.0)
       }
       .modifier(FlipEffect(flipped: $flipped, angle: showBack ? 180 : 0, axis: (x: 1, y: 0)))
-      //      .onTapGesture {
-      //        withAnimation(Animation.linear(duration: 1.5)) {
-      //          self.showBack.toggle()
-      //        }
-      //      }
-      //.animation(.easeInOut(duration: 1))
+            .onTapGesture {
+              withAnimation(Animation.linear(duration: 0.5)) {
+                self.showBack.toggle()
+              }
+            }
+      .animation(.easeInOut(duration: 0.6))
       Spacer()
     }
   }

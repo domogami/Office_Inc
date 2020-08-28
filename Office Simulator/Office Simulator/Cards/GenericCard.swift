@@ -138,7 +138,7 @@ struct GenericCard_Previews: PreviewProvider {
       Group {
         GenericCard(
           showMain: .constant(0),
-          flipped: .constant(false),
+          flipped: .constant(true),
           flipped1: .constant(false),
           cardNumber: 1,
           MainText: "I’m Isey - I work for Newspaper Inc. and I’m here on a tip, can we go outside?",

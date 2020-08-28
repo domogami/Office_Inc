@@ -21,6 +21,7 @@ struct MainGame: View {
     ZStack {
       // Background Color
       Color(#colorLiteral(red: 0.9490196078, green: 0.9647058824, blue: 1, alpha: 1))
+      //Color(#colorLiteral(red: 0.8352941176, green: 0.8196078431, blue: 0.9098039216, alpha: 1))
         .edgesIgnoringSafeArea(.all)
       
       // Fun Nametag
@@ -583,8 +584,8 @@ struct MainGame: View {
           if (self.showMain == 4 || self.showMain == 2) {
             GenericCard(
               showMain: self.$showMain,
-              flipped: self.$flipped,
-              flipped1: self.$flipped1,
+              flipped: self.$flipped1,
+              flipped1: self.$flipped,
               cardNumber: 4,
               MainText: "Anne is at her desk - she’s got something in her free hand while the other clicks at her keyboard.",
               SubText: "",
