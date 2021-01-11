@@ -14,6 +14,8 @@
 		D629AE4A24E4CEEA0055AA80 /* testGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629AE4924E4CEEA0055AA80 /* testGame.swift */; };
 		D643D78524B2DEBE002A4A99 /* PrimaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */; };
 		D643D78724B2E363002A4A99 /* GenericCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D643D78624B2E363002A4A99 /* GenericCard.swift */; };
+		D646BC8625A98EDF007F556F /* story.json in Resources */ = {isa = PBXBuildFile; fileRef = D646BC8525A98EDF007F556F /* story.json */; };
+		D646BC8B25A991B4007F556F /* node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646BC8A25A991B4007F556F /* node.swift */; };
 		D66D120A24B262E800AAC9FC /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D120924B262E800AAC9FC /* Coffee.swift */; };
 		D68D4C5C24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68D4C5B24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf */; };
 		D69630B824A9D85D0037A2C8 /* YesevaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */; };
@@ -55,6 +57,8 @@
 		D629AE4924E4CEEA0055AA80 /* testGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testGame.swift; sourceTree = "<group>"; };
 		D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryCard.swift; sourceTree = "<group>"; };
 		D643D78624B2E363002A4A99 /* GenericCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCard.swift; sourceTree = "<group>"; };
+		D646BC8525A98EDF007F556F /* story.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story.json; sourceTree = "<group>"; };
+		D646BC8A25A991B4007F556F /* node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = node.swift; sourceTree = "<group>"; };
 		D66D120924B262E800AAC9FC /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		D68D4C5B24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WaitingfortheSunrise-Regular.ttf"; sourceTree = "<group>"; };
 		D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YesevaOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -131,14 +135,17 @@
 				D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */,
 				D6D3F6A524A86A15003CE031 /* ContentView.swift */,
 				D6DD472424AD478B00C9086A /* MainGame.swift */,
+				D643D78624B2E363002A4A99 /* GenericCard.swift */,
 				D66D120924B262E800AAC9FC /* Coffee.swift */,
 				D6F075A224A9134100CB609D /* LottieView.swift */,
 				D629AE4724E4CED70055AA80 /* testCard.swift */,
 				D629AE4924E4CEEA0055AA80 /* testGame.swift */,
+				D646BC8A25A991B4007F556F /* node.swift */,
 				D6DD472824AD4F1D00C9086A /* Cards */,
 				D6D3F6A724A86A18003CE031 /* Assets.xcassets */,
 				D6D3F6AC24A86A18003CE031 /* LaunchScreen.storyboard */,
 				D6D3F6AF24A86A18003CE031 /* Info.plist */,
+				D646BC8525A98EDF007F556F /* story.json */,
 				D6D3F6A224A86A15003CE031 /* Office_Simulator.xcdatamodeld */,
 				D69630B724A9D7100037A2C8 /* YesevaOne-Regular.ttf */,
 				D68D4C5B24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf */,
@@ -179,7 +186,6 @@
 			children = (
 				D6D6096524AA84D000D940EA /* MainCard.swift */,
 				D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */,
-				D643D78624B2E363002A4A99 /* GenericCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 			files = (
 				D6D3F6AE24A86A18003CE031 /* LaunchScreen.storyboard in Resources */,
 				D6D3F6AB24A86A18003CE031 /* Preview Assets.xcassets in Resources */,
+				D646BC8625A98EDF007F556F /* story.json in Resources */,
 				D6D3F6A824A86A18003CE031 /* Assets.xcassets in Resources */,
 				D68D4C5C24B64E09008C9059 /* WaitingfortheSunrise-Regular.ttf in Resources */,
 				D6230D1224B81D1700589250 /* TitleTheme.mp3 in Resources */,
@@ -328,6 +335,7 @@
 			files = (
 				D6D6096624AA84D000D940EA /* MainCard.swift in Sources */,
 				D66D120A24B262E800AAC9FC /* Coffee.swift in Sources */,
+				D646BC8B25A991B4007F556F /* node.swift in Sources */,
 				D6D3F69F24A86A15003CE031 /* AppDelegate.swift in Sources */,
 				D6D3F6A124A86A15003CE031 /* SceneDelegate.swift in Sources */,
 				D643D78524B2DEBE002A4A99 /* PrimaryCard.swift in Sources */,

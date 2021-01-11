@@ -1,0 +1,58 @@
+[
+  {
+    "mainText": "Node1",
+    "subText": "Blah",
+    "leftText": "left",
+    "rightText": "right",
+    "image": "Coffee-1",
+    "left": {
+      "mainText": "Node2",
+      "subText": "Blah",
+      "leftText": "left",
+      "rightText": "right",
+      "image": "Coffee-1",
+      "left": {
+        "mainText": "Node1",
+        "subText": "Blah",
+        "leftText": "left",
+        "rightText": "right",
+        "image": "Coffee-1",
+        "left": {
+          "mainText": "Node2",
+          "subText": "Blah",
+          "leftText": "left",
+          "rightText": "right",
+          "image": "Coffee-1",
+          "left": {
+            "mainText": "Node1",
+            "subText": "Blah",
+            "leftText": "left",
+            "rightText": "right",
+            "image": "Coffee-1"
+          },
+          "right": {
+            "mainText": "Node1",
+            "subText": "Blah",
+            "leftText": "left",
+            "rightText": "right",
+            "image": "Coffee-1"
+          }
+        }
+      },
+      "right": {
+        "mainText": "Node1",
+        "subText": "Blah",
+        "leftText": "left",
+        "rightText": "right",
+        "image": "Coffee-1"
+      }
+    },
+    "right": {
+      "mainText": "Node3",
+      "subText": "Blah",
+      "leftText": "left",
+      "rightText": "right",
+      "image": "Coffee-1"
+    }
+  }
+]

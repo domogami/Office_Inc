@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     for family in UIFont.familyNames.sorted() {
         let names = UIFont.fontNames(forFamilyName: family)
-        print("Family: \(family) Font names: \(names)")
+    // print("Family: \(family) Font names: \(names)")
     }
     return true
   }
