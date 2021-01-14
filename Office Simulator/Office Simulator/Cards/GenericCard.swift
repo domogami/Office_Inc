@@ -13,14 +13,13 @@ struct GenericCard: View {
   @Binding var showMain: Int
   @Binding var flipped: Bool
   @Binding var flipped1: Bool
+  @Binding var currentNode: node
   var cardNumber: Int
   var MainText: String
   var SubText: String
   var LeftText: String
   var RightText: String
   var imageName: String
-  var rightChoice: Int
-  var leftChoice: Int
   var italic: Int
   
   var body: some View {
@@ -45,10 +44,10 @@ struct GenericCard: View {
       .offset(x: viewState.width * (2/3))
       .rotationEffect(.degrees(-10))
       .animation(.easeInOut)
-      .offset(x: (self.showMain != cardNumber) ? -800 : 0)
-      .animation(.spring())
+      .offset(x: (!self.flipped) ? -800 : 0)
+      .animation(Animation.spring().delay(1.5))
       .opacity(self.flipped ? 1 : 0)
-      .animation(.easeInOut)
+      .animation(Animation.easeInOut(duration: 0.1).delay(0.2))
       
       // Right Post It
       VStack {
@@ -70,10 +69,10 @@ struct GenericCard: View {
       .offset(x: viewState.width * (2/3))
       .rotationEffect(.degrees(10))
       .animation(Animation.easeInOut.delay(0))
-      .offset(x: (self.showMain != cardNumber) ? 800 : 0)
+      .offset(x: (!self.flipped) ? 800 : 0)
       .animation(Animation.spring().delay(1.5))
       .opacity(self.flipped ? 1 : 0)
-      .animation(.easeInOut)
+      .animation(Animation.easeInOut(duration: 0.1).delay(0.2))
       
       FlipView(
         front:
@@ -93,6 +92,8 @@ struct GenericCard: View {
           )
           .frame(width: screen.width * (3/4), height: screen.height / 2)
           .opacity(self.flipped ? 1 : 0)
+          .animation(Animation.easeInOut(duration: 0))
+         
         ),
         showBack: self.$flipped
       )
@@ -106,25 +107,34 @@ struct GenericCard: View {
           if (self.viewState.width < -70) {
             self.viewState.width = -800
             self.flipped = false
-            self.simpleSuccess()
-            self.showMain = self.rightChoice
-            print(self.showMain)
             self.flipped1 = true
+            self.simpleSuccess()
+            if currentNode.right != nil {
+              self.currentNode = self.currentNode.right!
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.showMain += 1
+            }
           }
           else if (self.viewState.width > 70) {
             self.viewState.width = 800
             self.flipped = false
-            self.simpleSuccess()
-            self.showMain = self.leftChoice
-            print(self.showMain)
             self.flipped1 = true
+            self.simpleSuccess()
+            if currentNode.left != nil {
+              self.currentNode = self.currentNode.left!
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.showMain += 1
+            }
           }
           else {
             self.viewState = .zero
           }
         }
       )
-        .animation(.spring())
+      
+      .animation(Animation.spring().delay(0))
     }
   }
   func simpleSuccess() {
@@ -136,20 +146,20 @@ struct GenericCard: View {
 struct GenericCard_Previews: PreviewProvider {
     static var previews: some View {
       Group {
-        GenericCard(
-          showMain: .constant(0),
-          flipped: .constant(true),
-          flipped1: .constant(false),
-          cardNumber: 1,
-          MainText: "I’m Isey - I work for Newspaper Inc. and I’m here on a tip, can we go outside?",
-          SubText: "",
-          LeftText: "I’m a little busy, can you come by later?",
-          RightText: "Yeah, I’m not so busy right now",
-          imageName: "coffee",
-          rightChoice: 1,
-          leftChoice: 1,
-          italic: 0
-        )
+//        GenericCard(
+//          showMain: .constant(0),
+//          flipped: .constant(true),
+//          flipped1: .constant(false),
+//          cardNumber: 1,
+//          MainText: "I’m Isey - I work for Newspaper Inc. and I’m here on a tip, can we go outside?",
+//          SubText: "",
+//          LeftText: "I’m a little busy, can you come by later?",
+//          RightText: "Yeah, I’m not so busy right now",
+//          imageName: "coffee",
+//          rightChoice: 1,
+//          leftChoice: 1,
+//          italic: 0
+//        )
       }
     }
 }

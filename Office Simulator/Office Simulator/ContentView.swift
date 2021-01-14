@@ -395,14 +395,16 @@ struct FlipView<SomeTypeOfViewA : View, SomeTypeOfViewB : View> : View {
       
       ZStack() {
         front.opacity(flipped ? 0.0 : 1.0)
+          .animation(Animation.easeInOut(duration: 0.1).delay(0.1))
         back.opacity(flipped ? 1.0 : 0.0)
+          .animation(Animation.easeInOut(duration: 0.1).delay(0.1))
       }
       .modifier(FlipEffect(flipped: $flipped, angle: showBack ? 180 : 0, axis: (x: 1, y: 0)))
-            .onTapGesture {
-              withAnimation(Animation.linear(duration: 0.5)) {
-                self.showBack.toggle()
-              }
-            }
+//            .onTapGesture {
+//              withAnimation(Animation.linear(duration: 0.5)) {
+//                self.showBack.toggle()
+//              }
+//            }
       .animation(.easeInOut(duration: 0.6))
       Spacer()
     }

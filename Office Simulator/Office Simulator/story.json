@@ -1,37 +1,37 @@
 [
   {
-    "mainText": "Node1",
-    "subText": "Blah",
-    "leftText": "left",
-    "rightText": "right",
+    "mainText": "Morning \\(self.playerName) - you’re here early today. That solicitor, eh, the one from a week ago, they’re still here waiting for you",
+    "subText": "",
+    "leftText": "Them again! Tell them I’m busy...",
+    "rightText": "Oh! Tell them I’ll be right with them.",
     "image": "Coffee-1",
     "left": {
-      "mainText": "Node2",
-      "subText": "Blah",
-      "leftText": "left",
-      "rightText": "right",
-      "image": "Coffee-1",
+      "mainText": "The office is bustling - you have a project to attend to, or you could see someone else...",
+      "subText": "",
+      "leftText": "I wonder if Anne’s busy right now...",
+      "rightText": "I should go finish my project with Abe!",
+      "image": "office-desk",
       "left": {
-        "mainText": "Node1",
+        "mainText": "Anne is at her desk - she’s got something in her free hand while the other clicks at her keyboard.",
         "subText": "Blah",
-        "leftText": "left",
-        "rightText": "right",
-        "image": "Coffee-1",
+        "leftText": "What’s that, Anne?",
+        "rightText": "Hey Anne!",
+        "image": "Anne1",
         "left": {
-          "mainText": "Node2",
-          "subText": "Blah",
-          "leftText": "left",
-          "rightText": "right",
-          "image": "Coffee-1",
+          "mainText": "\\(self.playerName), who was that there?",
+          "subText": "",
+          "leftText": "I don’t know,  I just told them to leave",
+          "rightText": "Oh, they said they was a reporter from Newspaper Inc",
+          "image": "Anne1",
           "left": {
-            "mainText": "Node1",
-            "subText": "Blah",
-            "leftText": "left",
-            "rightText": "right",
-            "image": "Coffee-1"
+            "mainText": "Well that’s just weird. Anyhow, how are you liking your desk space? Anything you need?",
+            "subText": "",
+            "leftText": "It’s perfect - thank you for asking!",
+            "rightText": "Well, I was gonna ask about that - when can I get a better one?",
+            "image": "Anne1"
           },
           "right": {
-            "mainText": "Node1",
+            "mainText": "Node16",
             "subText": "Blah",
             "leftText": "left",
             "rightText": "right",
@@ -40,19 +40,75 @@
         }
       },
       "right": {
-        "mainText": "Node1",
+        "mainText": "Node4",
         "subText": "Blah",
         "leftText": "left",
         "rightText": "right",
-        "image": "Coffee-1"
+        "image": "Coffee-1",
+        "left": {
+          "mainText": "Node9",
+          "subText": "Blah",
+          "leftText": "left",
+          "rightText": "right",
+          "image": "Coffee-1"
+        },
+        "right": {
+          "mainText": "Node10",
+          "subText": "Blah",
+          "leftText": "left",
+          "rightText": "right",
+          "image": "Coffee-1"
+        }
       }
     },
     "right": {
-      "mainText": "Node3",
+      "mainText": "Node2",
       "subText": "Blah",
       "leftText": "left",
       "rightText": "right",
-      "image": "Coffee-1"
+      "image": "Coffee-1",
+      "left": {
+        "mainText": "Node5",
+        "subText": "Blah",
+        "leftText": "left",
+        "rightText": "right",
+        "image": "Coffee-1",
+        "left": {
+          "mainText": "Node11",
+          "subText": "Blah",
+          "leftText": "left",
+          "rightText": "right",
+          "image": "Coffee-1"
+        },
+        "right": {
+          "mainText": "Node12",
+          "subText": "Blah",
+          "leftText": "left",
+          "rightText": "right",
+          "image": "Coffee-1"
+        }
+      },
+      "right": {
+        "mainText": "Node6",
+        "subText": "Blah",
+        "leftText": "left",
+        "rightText": "right",
+        "image": "Coffee-1",
+        "left": {
+          "mainText": "Node13",
+          "subText": "Blah",
+          "leftText": "left",
+          "rightText": "right",
+          "image": "Coffee-1"
+        },
+        "right": {
+          "mainText": "Node14",
+          "subText": "Blah",
+          "leftText": "left",
+          "rightText": "right",
+          "image": "Coffee-1"
+        }
+      }
     }
   }
 ]

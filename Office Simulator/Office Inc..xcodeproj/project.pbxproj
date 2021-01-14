@@ -135,7 +135,6 @@
 				D6D3F6A024A86A15003CE031 /* SceneDelegate.swift */,
 				D6D3F6A524A86A15003CE031 /* ContentView.swift */,
 				D6DD472424AD478B00C9086A /* MainGame.swift */,
-				D643D78624B2E363002A4A99 /* GenericCard.swift */,
 				D66D120924B262E800AAC9FC /* Coffee.swift */,
 				D6F075A224A9134100CB609D /* LottieView.swift */,
 				D629AE4724E4CED70055AA80 /* testCard.swift */,
@@ -184,6 +183,7 @@
 		D6DD472824AD4F1D00C9086A /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				D643D78624B2E363002A4A99 /* GenericCard.swift */,
 				D6D6096524AA84D000D940EA /* MainCard.swift */,
 				D643D78424B2DEBE002A4A99 /* PrimaryCard.swift */,
 			);

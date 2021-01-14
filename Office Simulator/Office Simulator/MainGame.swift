@@ -9,9 +9,10 @@
 import SwiftUI
 
 struct MainGame: View {
-  
-  @State var flipped = false
+  @ObservedObject var GameTree = FetchNodes()
+  @State var flipped = true
   @State var flipped1 = false
+  @State var currentNode: node = node(mainText: "", subText: "", leftText: "", rightText: "", image: "", left: nil, right: nil)
   @Binding var playerName: String
   @Binding var index: Int
   @Binding var showMain: Int
@@ -56,6 +57,76 @@ struct MainGame: View {
         .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
         .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
         .rotationEffect(.degrees(-5))
+        
+        VStack {
+          Spacer()
+        }
+        .frame(width: screen.width * (3/4), height: screen.height / 2)
+        .background(Color.white)
+        .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+        
+        VStack {
+          Spacer()
+        }
+        .frame(width: screen.width * (3/4), height: screen.height / 2)
+        .background(Color.white)
+        .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+        
+        FlipView(
+          front:
+            VStack {
+              Spacer()
+            }
+            .frame(width: screen.width * (3/4), height: screen.height / 2)
+            .background(Color.white)
+            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1),
+          back:
+          ( VStack {
+            Spacer()
+          }
+          .frame(width: screen.width * (3/4), height: screen.height / 2)
+          .background(Color.white)
+          .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+          .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+          ),
+          showBack: self.$flipped
+        )
+        
+        if (showMain % 2 == 1) {
+            GenericCard(
+              showMain: self.$showMain,
+              flipped: self.$flipped1,
+              flipped1: self.$flipped,
+              currentNode: self.$currentNode,
+              cardNumber: 1,
+              MainText: currentNode.mainText,
+              SubText: currentNode.subText,
+              LeftText: currentNode.leftText,
+              RightText: currentNode.rightText,
+              imageName: currentNode.image,
+              italic: 0
+            )
+        }
+        if(showMain % 2 == 0) {
+            GenericCard(
+              showMain: self.$showMain,
+              flipped: self.$flipped,
+              flipped1: self.$flipped1,
+              currentNode: self.$currentNode,
+              cardNumber: 0,
+              MainText: currentNode.mainText,
+              SubText: currentNode.subText,
+              LeftText: currentNode.leftText,
+              RightText: currentNode.rightText,
+              imageName: currentNode.image,
+              italic: 0
+            )
+        }
+        
+        
         
 //        Group {
 //          if (self.showMain > 31) {
@@ -671,7 +742,13 @@ struct MainGame: View {
 //          }
 //        } // End Of Group
       }
-    }
+    }.onAppear(
+      perform: {
+        self.currentNode = GameTree.nodes[0]
+        
+      }
+    
+    )
   }
   func simpleSuccess() {
     let generator = UINotificationFeedbackGenerator()
